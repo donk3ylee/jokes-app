@@ -11,7 +11,7 @@ class JokeController extends Controller
     // index returns all of the paginated jokes
     public function index()
     {
-
+        return view('jokes/index', ['jokes' => Joke::latest()->paginate(10)]);
     }
 
     // create displays the create form
