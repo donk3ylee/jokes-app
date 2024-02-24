@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JokeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('homepage');
+});
+
+ 
+Route::controller(JokeController::class)->prefix('jokes')->group(function () {
+    Route::get('/', 'index', JokeController::class);
+    Route::get('/create', 'create');
+    Route::post('/store', 'store');
+    Route::get('/{joke}/show/', 'show');
+    Route::get('/{Joke}/edit/', 'edit');
+    Route::put('/{joke}/update', 'update');
+    Route::delete('/{joke}/destroy', 'destroy');
 });
