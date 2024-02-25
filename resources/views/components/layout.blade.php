@@ -7,7 +7,7 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    <span class="text-red-500">BOO</span>
+    <span class="text-red-500">BOO YAH</span>
     {{ $slot }}
 </body>
 </html>
