@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class joke-name extends Component
+class jokeName extends Component
 {
     public $name;
     /**
