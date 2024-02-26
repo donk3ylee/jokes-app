@@ -1,4 +1,4 @@
-    <x-layout title="all jokes">
+    <x-layout  title="Search all jokes">
 
         @foreach($jokes as $joke)
 
@@ -9,4 +9,3 @@
         {{  $jokes->onEachSide(5)->links() }}
 
     </x-layout>
-p
