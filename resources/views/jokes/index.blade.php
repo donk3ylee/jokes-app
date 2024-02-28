@@ -1,11 +1,10 @@
     <x-layout  title="Search all jokes">
-
+        {{-- TODO: need to add search functionality --}}
+        <div class="grid place-items-center">
         @foreach($jokes as $joke)
-
-            <x-jokes.joke-name :name="$joke->name" class="text-center text-red-500 align-middle from-stone-600"/>
-
+            <x-jokes.joke-card.card-container :joke="$joke" />
         @endforeach
-
+        </div>
         {{  $jokes->onEachSide(5)->links() }}
-
+        <p>ksadk sda dkkdk skad sad k as sdkadkkds ska dksksa daskd kskdks kad ksa kkkds akdkgfkdfksdf kkf dsk kdskakd</p>
     </x-layout>
