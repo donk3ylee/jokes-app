@@ -7,6 +7,8 @@
     <title> {{  $title ?? config('app.name') }}</title>
 </head>
 <body>
-    {{ $slot }}
+    <x-page-wrapper>
+        {{ $slot }}
+    </x-page-wrapper>
 </body>
 </html>
