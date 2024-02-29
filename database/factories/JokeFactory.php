@@ -34,7 +34,7 @@ class JokeFactory extends Factory
 
         return [
             //
-            'name' => fake()->name(),
+            'title' => fake()->name(),
             'joke' => fake()->paragraph(),
             'punchline' => fake()->sentence(),
             'category' => $catagories[rand(0, count($catagories)-1)],

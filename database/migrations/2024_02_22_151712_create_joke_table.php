@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('jokes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('title');
             $table->text('joke');
             $table->string('punchline')->nullable();
             $table->string('category')->default('general');
