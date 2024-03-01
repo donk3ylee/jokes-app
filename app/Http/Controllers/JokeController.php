@@ -16,7 +16,7 @@ class JokeController extends Controller
 
     // create displays the create form
     public function create()
-    { 
+    {
 
     }
 
@@ -27,9 +27,9 @@ class JokeController extends Controller
     }
 
     // show displays one selected joke from the database
-    public function show()
+    public function show(Joke $joke)
     {
-
+        return view('jokes/show', ['joke' => $joke]);
     }
 
     // edit displays the edit form
@@ -43,7 +43,7 @@ class JokeController extends Controller
     {
 
     }
-    
+
     // destroy deletes the selected joke in the model
     public function destroy()
     {

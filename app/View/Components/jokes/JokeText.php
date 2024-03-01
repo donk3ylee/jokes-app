@@ -27,7 +27,7 @@ class JokeText extends Component
         if(isset($this->link)){
             $this->append = "<a href='". $this->link ."'>". $this->append ."</a>";
         }
-        $this->jokeText = Str::limit($this->text, $this->length, $this->append);
+        $this->length ? $this->jokeText = Str::limit($this->text, $this->length, $this->append) : $this->jokeText = $this->text;
     }
 
     /**

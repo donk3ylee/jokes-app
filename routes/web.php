@@ -18,9 +18,9 @@ Route::get('/', function(){
     return view('homepage');
 });
 
- 
+
 Route::controller(JokeController::class)->prefix('jokes')->group(function () {
-    Route::get('/', 'index', JokeController::class);
+    Route::get('/', 'index');
     Route::get('/create', 'create');
     Route::post('/store', 'store');
     Route::get('/{joke}/show/', 'show');

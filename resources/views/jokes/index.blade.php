@@ -2,7 +2,9 @@
         {{-- TODO: need to add search functionality --}}
         <div class="grid place-items-center">
         @foreach($jokes as $joke)
-            <x-jokes.joke-card.card-container :joke="$joke" />
+            <a href="/jokes/{{ $joke->id }}/show/">
+                <x-jokes.joke-card.card-container :joke="$joke" />
+            </a>
         @endforeach
         </div>
         {{  $jokes->onEachSide(5)->links() }}
