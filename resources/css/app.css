@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+    x-cloak is for alpine.js to prevent elements hidden
+    on page load or refresh from being seen as the dom
+    loads them before alpine.js can hide them
+*/
+[x-cloak] {
+    display: none !important;
+}
