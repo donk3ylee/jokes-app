@@ -34,14 +34,14 @@ class JokeFactory extends Factory
 
         return [
             //
-            'title' => fake()->name(),
-            'joke' => fake()->paragraph(),
-            'punchline' => fake()->sentence(),
+            'title' => fake()->sentence(8, true),
+            'joke' => fake()->paragraph(8,true),
+            'punchline' => fake()->sentances(4, true),
             'category' => $catagories[rand(0, count($catagories)-1)],
-            // 'graphics' => fake()->,
+            'graphics' => fake()->imageUrl(1200, 460, 'stage', true, 'comedy'),
             'author_name' => fake()->name(),
-            'author_link' => fake()->sentence(),
-            // 'author_photo' => fake()->url(),
+            'author_link' => fake()->url(),
+            'author_photo' => fake()->imageUrl(360, 360, 'people', true, 'author'),
         ];
     }
 }
