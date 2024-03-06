@@ -14,7 +14,7 @@ class Joke extends Model
     protected $fillable = [
         'name',
         'joke',
-        'punhline',
+        'punchline',
         'category',
         'graphics',
     ];
