@@ -11,6 +11,9 @@ export default {
         'xs': '520px',
     },
   },
-  plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
+
 }
 
