@@ -15,7 +15,7 @@ class Joke extends Model
         'name',
         'joke',
         'punchline',
-        'category',
+        'categories',
         'graphics',
     ];
 
