@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('joke');
             $table->string('punchline')->nullable();
-            $table->string('category')->default('general');
+            $table->string('categories')->default('general');
             $table->string('graphics')->nullable();
             $table->string('author_name');
             $table->string('author_link')->nullable();
