@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\AvailableCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,28 +17,13 @@ class JokeFactory extends Factory
      */
     public function definition(): array
     {
-        $catagories = [
-            'general',
-            'knock knock',
-            'dirty',
-            'black comedy',
-            'yo mama',
-            'bar',
-            'blonde',
-            'cruel',
-            'one liner',
-            'practical',
-            'satirical',
-            'three wishes',
-            'toilet',
-        ];
 
         return [
             //
             'title' => fake()->sentence(8, true),
             'joke' => fake()->paragraph(8, true),
-            'punchline' => fake()->sentences(4, true),
-            'category' => $catagories[rand(0, count($catagories) - 1)],
+            'punchline' => fake()->sentences(2, true),
+            'categories' => AvailableCategory::inRandomOrder()->pluck('category')->first(),
             'graphics' => fake()->imageUrl(1200, 460, 'stage', true, 'comedy'),
             'author_name' => fake()->name(),
             'author_link' => fake()->url(),
